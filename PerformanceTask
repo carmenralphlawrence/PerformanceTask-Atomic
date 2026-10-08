@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Development of Atomic Theory</title>
+
+    <style>
+
+        /* ===== BASIC ===== */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+            color: #222;
+        }
+
+
+        /* ===== HEADER ===== */
+
+        header {
+            background: linear-gradient(135deg, #164e63, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+
+        /* ===== NAVIGATION ===== */
+
+        nav {
+            background-color: #123047;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7dd3fc;
+        }
+
+
+        /* ===== INTRO ===== */
+
+        .intro {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            color: #164e63;
+        }
+
+        .intro p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+
+        /* ===== TIMELINE ===== */
+
+        .timeline-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .timeline-section h2 {
+            text-align: center;
+            color: #164e63;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+
+        /* ===== SCIENTIST CARD ===== */
+
+        .scientist {
+            background-color: white;
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            border-left: 7px solid #2563eb;
+            transition: 0.3s;
+        }
+
+        .scientist:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px;
+        }
+
+
+        /* ===== IMAGE ===== */
+
+        .scientist img {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid #dbeafe;
+        }
+
+
+        /* ===== TEXT ===== */
+
+        .text {
+            flex: 1;
+        }
+
+        .number {
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .text h3 {
+            color: #164e63;
+            font-size: 27px;
+            margin: 7px 0;
+        }
+
+        .year {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .text p {
+            line-height: 1.7;
+            color: #444;
+        }
+
+
+        /* ===== BUTTON ===== */
+
+        .read-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .read-btn:hover {
+            background-color: #164e63;
+        }
+
+
+        /* ===== EXTRA INFORMATION ===== */
+
+        .more-info {
+            display: none;
+            padding: 0 25px 25px 25px;
+            border-top: 1px solid #ddd;
+            background-color: #f8fbff;
+        }
+
+        .more-info p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .more-info h4 {
+            color: #164e63;
+        }
+
+
+        /* ===== SUMMARY ===== */
+
+        .summary {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #dbeafe;
+            border-radius: 15px;
+        }
+
+        .summary h2 {
+            color: #164e63;
+            text-align: center;
+        }
+
+        .summary p {
+            line-height: 1.8;
+        }
+
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background-color: #123047;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+
+            .card-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .scientist img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .text h3 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header id="home">
+
+        <h1>Development of Atomic Theory</h1>
+
+        <p>
+            A journey through the ideas and discoveries that helped
+            scientists understand the structure and nature of matter.
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#summary">Summary</a>
+
+    </nav>
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>About the Atomic Theory</h2>
+
+        <p>
+            The idea of the atom has developed over thousands of years.
+            Ancient philosophers tried to explain what matter was made of,
+            while later scientists used experiments and observations to
+            develop more accurate atomic models.
+        </p>
+
+        <p>
+            This website presents the important ideas of eleven thinkers,
+            beginning with the Ancient Greek philosophers and continuing
+            to the development of modern quantum mechanics.
+        </p>
+
+    </div>
+
+
+    <!-- TIMELINE -->
+
+    <section class="timeline-section" id="timeline">
+
+        <h2>Scientists and Philosophers</h2>
+
+
+        <!-- 1 THALES -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <!-- PALITAN ANG IMAGE -->
+                <img src="thales.jpg"
+                     alt="Thales of Miletus">
+
+                <div class="text">
+
+                    <span class="number">01</span>
+
+                    <h3>Thales of Miletus</h3>
+
+                    <div class="year">c. 624–546 BCE</div>
+
+                    <p>
+                        Thales of Miletus was an Ancient Greek philosopher
+                        who believed that water was the fundamental substance
+                        from which everything came.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info1')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info1">
+
+                <h4>Contribution to the idea of matter</h4>
+
+                <p>
+                    Thales is considered one of the earliest Greek thinkers
+                    to search for a natural explanation of the world instead
+                    of explaining everything through mythology. He proposed
+                    that water was the basic substance of nature. Although
+                    his idea was not an atomic theory, it was important because
+                    it encouraged people to ask what everything is made of.
+                </p>
+
+                <p>
+                    His ideas became part of the early philosophical
+                    discussions about the nature of matter and helped
+                    influence later thinkers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 EMPEDOCLES -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="empedocles.jpg"
+                     alt="Empedocles">
+
+                <div class="text">
+
+                    <span class="number">02</span>
+
+                    <h3>Empedocles</h3>
+
+                    <div class="year">c. 494–434 BCE</div>
+
+                    <p>
+                        Empedocles proposed that all matter was composed
+                        of four basic elements: earth, water, air, and fire.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info2')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info2">
+
+                <h4>The Four Elements</h4>
+
+                <p>
+                    Empedocles believed that the four basic elements were
+                    always present and could combine in different ways.
+                    Earth represented solid matter, water represented liquids,
+                    air represented gases, and fire represented heat and energy.
+                </p>
+
+                <p>
+                    His theory became influential for many centuries.
+                    Although modern science does not accept the four elements
+                    as the basic components of matter, his ideas were an
+                    important step in the historical development of ideas
+                    about matter.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 LEUCIPPUS -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="leucippus.jpg"
+                     alt="Leucippus">
+
+                <div class="text">
+
+                    <span class="number">03</span>
+
+                    <h3>Leucippus</h3>
+
+                    <div class="year">5th century BCE</div>
+
+                    <p>
+                        Leucippus was an Ancient Greek philosopher associated
+                        with the early development of atomism.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info3')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info3">
+
+                <h4>Early Atomism</h4>
+
+                <p>
+                    Leucippus is traditionally associated with the idea that
+                    matter is made of extremely small particles moving through
+                    empty space. These particles were thought to be too small
+                    to be seen or divided.
+                </p>
+
+                <p>
+                    This idea was very different from the belief that matter
+                    was completely continuous. Leucippus' ideas were later
+                    developed further by his student or follower Democritus.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 DEMOCRITUS -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="democritus.jpg"
+                     alt="Democritus">
+
+                <div class="text">
+
+                    <span class="number">04</span>
+
+                    <h3>Democritus</h3>
+
+                    <div class="year">c. 460–370 BCE</div>
+
+                    <p>
+                        Democritus developed the idea that matter was made
+                        of tiny particles called "atomos."
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info4')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info4">
+
+                <h4>The Atom</h4>
+
+                <p>
+                    Democritus believed that if matter was divided into
+                    smaller and smaller pieces, eventually a particle would
+                    be reached that could not be divided any further.
+                    He called these particles "atomos," which means
+                    indivisible.
+                </p>
+
+                <p>
+                    He suggested that atoms could have different shapes
+                    and sizes and that they moved through empty space.
+                    His ideas were philosophical rather than experimental,
+                    but the concept of atoms became very important in
+                    the later development of science.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 ARISTOTLE -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="aristotle.jpg"
+                     alt="Aristotle">
+
+                <div class="text">
+
+                    <span class="number">05</span>
+
+                    <h3>Aristotle</h3>
+
+                    <div class="year">384–322 BCE</div>
+
+                    <p>
+                        Aristotle rejected the idea of indivisible atoms
+                        and believed that matter was continuous.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info5')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info5">
+
+                <h4>Aristotle's View of Matter</h4>
+
+                <p>
+                    Aristotle supported the idea that matter could be divided
+                    continuously and did not consist of tiny indivisible
+                    particles. He also supported the concept of four basic
+                    elements: earth, water, air, and fire.
+                </p>
+
+                <p>
+                    Because Aristotle was highly influential, his ideas about
+                    matter remained popular for many centuries. This caused
+                    the atomic ideas of Democritus to receive less attention
+                    for a long period of time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 DALTON -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/dalton.jpg"
+                     alt="John Dalton">
+
+                <div class="text">
+
+                    <span class="number">06</span>
+
+                    <h3>John Dalton</h3>
+
+                    <div class="year">1766–1844</div>
+
+                    <p>
+                        John Dalton developed one of the first modern
+                        scientific atomic theories in the early 1800s.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info6')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info6">
+
+                <h4>Dalton's Atomic Theory</h4>
+
+                <p>
+                    Dalton proposed that matter is made of atoms and that
+                    atoms of each element have their own characteristics.
+                    He also proposed that atoms combine in whole-number
+                    ratios to form compounds.
+                </p>
+
+                <p>
+                    Dalton's work was important because his atomic theory
+                    was based on scientific observations and chemical
+                    evidence. His model represented atoms as solid,
+                    indivisible spheres.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 THOMSON -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/thomson.jpg"
+                     alt="J. J. Thomson">
+
+                <div class="text">
+
+                    <span class="number">07</span>
+
+                    <h3>J. J. Thomson</h3>
+
+                    <div class="year">1856–1940</div>
+
+                    <p>
+                        J. J. Thomson discovered the electron and showed
+                        that atoms contain smaller particles.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info7')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info7">
+
+                <h4>Discovery of the Electron</h4>
+
+                <p>
+                    In 1897, J. J. Thomson used experiments with cathode
+                    rays to provide evidence for a negatively charged
+                    particle that became known as the electron.
+                </p>
+
+                <p>
+                    This discovery showed that the atom was not indivisible
+                    as Dalton's model had suggested. Thomson proposed the
+                    "plum pudding" model, where electrons were embedded
+                    in a positively charged region.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 RUTHERFORD -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/rutherford.jpg"
+                     alt="Ernest Rutherford">
+
+                <div class="text">
+
+                    <span class="number">08</span>
+
+                    <h3>Ernest Rutherford</h3>
+
+                    <div class="year">1871–1937</div>
+
+                    <p>
+                        Rutherford's experiments led to the discovery
+                        of the atomic nucleus.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info8')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info8">
+
+                <h4>The Nuclear Model</h4>
+
+                <p>
+                    Rutherford and his team performed the famous gold foil
+                    experiment. They found that most alpha particles passed
+                    through the foil, while a small number were deflected
+                    strongly.
+                </p>
+
+                <p>
+                    From these observations, Rutherford concluded that most
+                    of an atom is empty space and that nearly all of its
+                    positive charge and most of its mass are concentrated
+                    in a very small central nucleus.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 BOHR -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/bohr.jpg"
+                     alt="Niels Bohr">
+
+                <div class="text">
+
+                    <span class="number">09</span>
+
+                    <h3>Niels Bohr</h3>
+
+                    <div class="year">1885–1962</div>
+
+                    <p>
+                        Niels Bohr proposed that electrons occupy specific
+                        energy levels around the nucleus.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info9')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info9">
+
+                <h4>Bohr's Atomic Model</h4>
+
+                <p>
+                    Bohr improved Rutherford's model by proposing that
+                    electrons can exist in specific energy levels around
+                    the nucleus. Electrons can move from one energy level
+                    to another by absorbing or releasing energy.
+                </p>
+
+                <p>
+                    His model successfully explained important features
+                    of the hydrogen atom's spectrum and became an important
+                    step toward the development of modern quantum theory.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 SCHRODINGER -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/schrodinger.jpg"
+                     alt="Erwin Schrödinger">
+
+                <div class="text">
+
+                    <span class="number">10</span>
+
+                    <h3>Erwin Schrödinger</h3>
+
+                    <div class="year">1887–1961</div>
+
+                    <p>
+                        Schrödinger helped develop the quantum mechanical
+                        model of the atom using wave mechanics.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info10')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info10">
+
+                <h4>Quantum Mechanical Model</h4>
+
+                <p>
+                    Schrödinger developed a mathematical description of
+                    particles using wave functions. His work became an
+                    important part of quantum mechanics.
+                </p>
+
+                <p>
+                    In the modern atomic model, electrons are not described
+                    as simply traveling around the nucleus in fixed circular
+                    paths. Instead, their locations are described using
+                    probabilities. Regions where an electron is likely to
+                    be found are called orbitals.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 11 HEISENBERG -->
+
+        <div class="scientist">
+
+            <div class="card-content">
+
+                <img src="images/heisenberg.jpg"
+                     alt="Werner Heisenberg">
+
+                <div class="text">
+
+                    <span class="number">11</span>
+
+                    <h3>Werner Heisenberg</h3>
+
+                    <div class="year">1901–1976</div>
+
+                    <p>
+                        Heisenberg made major contributions to quantum
+                        mechanics and developed the uncertainty principle.
+                    </p>
+
+                    <button class="read-btn"
+                            onclick="showInfo('info11')">
+                        Read More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="more-info" id="info11">
+
+                <h4>Uncertainty Principle</h4>
+
+                <p>
+                    Heisenberg developed important ideas in quantum mechanics.
+                    His uncertainty principle states that there are limits
+                    to how precisely certain pairs of physical properties,
+                    such as position and momentum, can be known at the same
+                    time.
+                </p>
+
+                <p>
+                    His work helped establish the modern understanding that
+                    electrons cannot be described simply as tiny objects
+                    following predictable circular paths around the nucleus.
+                    Together with the work of other quantum scientists,
+                    Heisenberg helped shape the modern atomic model.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section id="summary">
+
+        <div class="summary">
+
+            <h2>Conclusion</h2>
+
+            <p>
+                The development of atomic theory shows how scientific ideas
+                change when new evidence and explanations become available.
+                Thales began thinking about the basic substance of nature,
+                while Empedocles proposed four elements. Leucippus and
+                Democritus introduced early ideas about atoms, while
+                Aristotle supported a continuous view of matter.
+            </p>
+
+            <p>
+                Centuries later, John Dalton developed a scientific atomic
+                theory. J. J. Thomson discovered the electron, Rutherford
+                discovered evidence for the nucleus, and Bohr introduced
+                specific energy levels. Schrödinger and Heisenberg then
+                contributed to quantum mechanics, which led to the modern
+                description of electrons and atoms.
+            </p>
+
+            <p>
+                Each idea was an important part of the journey toward our
+                current understanding of the atom.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            <b>Development of Atomic Theory</b>
+        </p>
+
+        <p>
+            Science Project | Created by Students
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function showInfo(id) {
+
+            let box = document.getElementById(id);
+
+            if (box.style.display === "block") {
+
+                box.style.display = "none";
+
+            } else {
+
+                box.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+</html>
